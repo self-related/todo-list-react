@@ -1,8 +1,9 @@
 #todo-app {
     margin: 1rem auto;
     padding: 1rem 2rem;
-    width: fit-content;
-    min-width: 30rem;
+
+    width: 40%;
+    min-width: 25rem;
     min-height: 20rem;
 
     border-radius: 10px;

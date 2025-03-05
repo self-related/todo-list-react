@@ -6,6 +6,7 @@
     background-color: rgba(137, 43, 226, 0.684);
 
     list-style-position: inside;
+    overflow-wrap: break-word;
 }
 
 .delete-item {
