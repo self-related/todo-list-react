@@ -15,6 +15,9 @@ export default function ToDoApp() {
     };
 
     const handleAddButtonClick = () => {
+        if (newItem === "") 
+            return;
+        
         setItems([...items, newItem]);
     };
 
