@@ -26,11 +26,10 @@ export default function ToDoApp() {
                 <input type="text" onChange={handleInputEdit} value={newItem} />
                 <button onClick={handleAddButtonClick}>Add</button>
             </div>
-            <div class="list">
-                <ol>
-                    {items.map((item, index) => (<Item key={index} id={index}>{item}</Item>))}
-                </ol>
-            </div>
+            
+            <ol class="list">
+                {items.map((item, index) => (<Item key={index} id={index}>{item}</Item>))}
+            </ol>
         </div>
     );
 }
