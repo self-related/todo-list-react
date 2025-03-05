@@ -17,21 +17,34 @@ export default function ToDoApp() {
     const handleAddButtonClick = () => {
         if (newItem === "") 
             return;
-        
+
         setItems([...items, newItem]);
+    };
+
+    /**@param {number} index */
+    const handleDeleteButton = (removingItemIndex) => {
+        const itemsNew = items.filter((_item, index) => index !== removingItemIndex);
+        console.log(removingItemIndex)
+        setItems(itemsNew);
     };
 
 
     return (
         <div id="todo-app">
             <h1>ToDo List</h1>
-            <div class="app-panel">
+            <div className="app-panel">
                 <input type="text" onChange={handleInputEdit} value={newItem} />
                 <button onClick={handleAddButtonClick}>Add</button>
             </div>
             
-            <ol class="list">
-                {items.map((item, index) => (<Item key={index} id={index}>{item}</Item>))}
+            <ol className="list">
+                {
+                    items.map((item, index) => (
+                        <Item key={index} id={index} onDeleteItem={handleDeleteButton}>
+                            {item}
+                        </Item>
+                    ))
+                }
             </ol>
         </div>
     );
