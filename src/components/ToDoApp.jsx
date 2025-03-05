@@ -28,6 +28,12 @@ export default function ToDoApp() {
         setItems(itemsNew);
     };
 
+    const handleClearButtonClick = () => {
+        const answer = window.confirm("Remove all items?");       
+        if (answer) 
+            setItems([]);
+    };
+
     const handleMoveUpButton = (id) => {
         if (id === 0)
             return;
@@ -57,6 +63,7 @@ export default function ToDoApp() {
             <div className="app-panel">
                 <input type="text" onChange={handleInputEdit} value={newItem} />
                 <button onClick={handleAddButtonClick}>Add</button>
+                <button onClick={handleClearButtonClick}>Clear</button>
             </div>
             
             <ol className="list">
