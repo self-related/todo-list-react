@@ -19,6 +19,7 @@ export default function ToDoApp() {
             return;
 
         setItems([...items, newItem]);
+        setNewItem(""); // input
     };
 
     /**@param {number} index */
