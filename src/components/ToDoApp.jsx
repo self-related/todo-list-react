@@ -22,6 +22,12 @@ export default function ToDoApp() {
         setNewItem(""); // input
     };
 
+    /**@param {KeyboardEvent} event */
+    const handleKeyDown = (event) => {
+        if (event.key === "Enter")
+            handleAddButtonClick();
+    }
+
     /**@param {number} index */
     const handleDeleteButton = (removingItemIndex) => {
         const itemsNew = items.filter((_item, index) => index !== removingItemIndex);
@@ -62,7 +68,7 @@ export default function ToDoApp() {
         <div id="todo-app">
             <h1>ToDo List</h1>
             <div className="app-panel">
-                <input type="text" onChange={handleInputEdit} value={newItem} />
+                <input type="text" onChange={handleInputEdit} value={newItem} onKeyDown={handleKeyDown} />
                 <button onClick={handleAddButtonClick}>Add</button>
                 <button onClick={handleClearButtonClick}>Clear</button>
             </div>
