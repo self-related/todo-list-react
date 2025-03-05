@@ -3,7 +3,15 @@ import './App.css'
 function App() {
 
   return (
-    <div>0</div>
+    <>
+        <nav id="navbar"></nav>
+        
+        <main>
+            <div id="todo-app"></div>
+        </main>
+
+        <footer id="footer"></footer>
+    </>
   )
 }
 
