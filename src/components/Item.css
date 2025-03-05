@@ -8,6 +8,9 @@
     list-style-position: inside;
     overflow-wrap: break-word;
 }
+.item > button {
+    margin-left: 0.3rem;
+}
 
 .delete-item {
     background: none;
@@ -15,6 +18,19 @@
 
     color: red;
 
-    font-size: 1rem;
+    font-size: 1.3rem;
     cursor: pointer;
+    text-shadow: 0.7px 2px 0.7px black;
+
+}
+
+.move-item {
+    background: none;
+    border: none;
+    color: #32fc9e;
+
+    font-size: 1.3rem;
+
+    cursor: pointer;
+    text-shadow: 0.7px 1.5px 1px black;
 }

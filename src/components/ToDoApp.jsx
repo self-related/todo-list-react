@@ -28,6 +28,28 @@ export default function ToDoApp() {
         setItems(itemsNew);
     };
 
+    const handleMoveUpButton = (id) => {
+        if (id === 0)
+            return;
+
+        const tempMovingItem = items[id];
+        items[id] = items[id - 1];
+        items[id - 1] = tempMovingItem;
+
+        setItems([...items]);
+    }
+
+    const handleMoveDownButton = (id) => {
+        if (id === items.length - 1)
+            return;
+
+        const tempMovingItem = items[id];
+        items[id] = items[id + 1];
+        items[id + 1] = tempMovingItem;
+
+        setItems([...items]);
+    }
+
 
     return (
         <div id="todo-app">
@@ -40,7 +62,7 @@ export default function ToDoApp() {
             <ol className="list">
                 {
                     items.map((item, index) => (
-                        <Item key={index} id={index} onDeleteItem={handleDeleteButton}>
+                        <Item key={index} id={index} onDeleteItem={handleDeleteButton} onMoveUpButton={handleMoveUpButton} onMoveDownButton={handleMoveDownButton}>
                             {item}
                         </Item>
                     ))
