@@ -5,12 +5,29 @@
     border-radius: 5px;
     background-color: rgba(137, 43, 226, 0.684);
 
+    width: 100%;
+
     list-style-position: inside;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    column-gap: 0.5rem;
+    align-items: center;
+}
+.item > li {
+    margin: 0;
+    grid-column: 1 / span 2;
     overflow-wrap: break-word;
 }
-.item > button {
-    margin-left: 0.3rem;
+
+.item-control {
+    grid-column-start: 3;
+    
+    display: flex;
+    gap: 0.3rem;
 }
+
 
 .delete-item {
     background: none;
