@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ToDoApp.css";
+import Item from "./Item";
 
 export default function ToDoApp() {
 
@@ -27,7 +28,7 @@ export default function ToDoApp() {
             </div>
             <div class="list">
                 <ol>
-                    {items}
+                    {items.map((item, index) => (<Item key={index} id={index}>{item}</Item>))}
                 </ol>
             </div>
         </div>

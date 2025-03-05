@@ -28,7 +28,6 @@
 }
 
 .app-panel > input {
-    /* width: 100%; */
     flex-grow: 1;
 
     accent-color: blueviolet;
@@ -61,5 +60,4 @@
     padding: 0.5rem;
     margin: 1rem auto;
     
-    background-color: #666666;
 }

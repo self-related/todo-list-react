@@ -1,0 +1,9 @@
+.item {
+    margin: 0.3rem 0;
+    padding: 0.5rem 8px;
+
+    border-radius: 5px;
+    background-color: rgba(137, 43, 226, 0.684);
+    
+    list-style-position: inside;
+}
