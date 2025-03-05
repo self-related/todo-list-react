@@ -1,16 +1,19 @@
 import './App.css'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import ToDoApp from './components/ToDoApp'
 
 function App() {
 
   return (
     <>
-        <nav id="navbar"></nav>
+        <Navbar />
         
         <main>
-            <div id="todo-app"></div>
+            <ToDoApp />
         </main>
 
-        <footer id="footer"></footer>
+        <Footer />
     </>
   )
 }
